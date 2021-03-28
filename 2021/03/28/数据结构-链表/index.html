@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>高数积分 | Crushed</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="Crushed,Crushed's Blog" />
+  
+  <meta name="description" content="数据结构——链表  单向链表  节点头文件 SigleNode.hpp 123456789101112131415161718192021222324252627282930313233#pragma once#ifndef _SIGLE_NODE_HPP_#define _SIGLE_NODE_HPP_template &lt;class T&gt;class SigleNode&amp;#123;p">
+<meta property="og:type" content="article">
+<meta property="og:title" content="高数积分">
+<meta property="og:url" content="http://example.com/2021/03/28/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%93%BE%E8%A1%A8/index.html">
+<meta property="og:site_name" content="Crushed">
+<meta property="og:description" content="数据结构——链表  单向链表  节点头文件 SigleNode.hpp 123456789101112131415161718192021222324252627282930313233#pragma once#ifndef _SIGLE_NODE_HPP_#define _SIGLE_NODE_HPP_template &lt;class T&gt;class SigleNode&amp;#123;p">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-03-27T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-03-28T05:27:05.763Z">
+<meta property="article:author" content="Crushed">
+<meta property="article:tag" content="数据结构">
+<meta property="article:tag" content="链表">
+<meta name="twitter:card" content="summary">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  
+  <link href="https://cdn.bootcss.com/KaTeX/0.7.1/katex.min.css" rel="stylesheet">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<script src="/js/pace.min.js"></script>
+
+  
+
+  
+  
+
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Crushed" type="application/atom+xml">
+</head>
+
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">Crushed&#39;s Blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  target="_blank" rel="noopener" href="https://crushed.vip/">
+                        <i class="fa fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>Archives</span>
+                    </a>
+                    
+                    <a  href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>About</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/QQ%E5%9B%BE%E7%89%8720201206224159.jpg" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        Crushed&#39;s Blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="Crushed" target="_blank" href="https://crushed.vip/">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/crushed-sw">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="Weibo" target="_blank" href="//weibo.com/WongMinHo">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                        <a title="Twitter" target="_blank" href="//twitter.com/huangminhow">
+                            <i class="fa fa-twitter fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-数据结构-链表" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      高数积分
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/C++/">C++</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2021-03-28
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <h1 id="数据结构链表"><a class="markdownIt-Anchor" href="#数据结构链表"></a> 数据结构——链表</h1>
+<h2 id="单向链表"><a class="markdownIt-Anchor" href="#单向链表"></a> 单向链表</h2>
+<h3 id="节点头文件-siglenodehpp"><a class="markdownIt-Anchor" href="#节点头文件-siglenodehpp"></a> 节点头文件 <code>SigleNode.hpp</code></h3>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> once</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> _SIGLE_NODE_HPP_</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> _SIGLE_NODE_HPP_</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt;</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SigleNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">//构造函数</span></span><br><span class="line">    <span class="built_in">SigleNode</span>();</span><br><span class="line">    <span class="built_in">SigleNode</span>(T, SigleNode*);</span><br><span class="line">    </span><br><span class="line">    T info;</span><br><span class="line">    SigleNode* next;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//方法的类外实现</span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt;</span></span><br><span class="line">SigleNode&lt;T&gt;::<span class="built_in">SigleNode</span>()</span><br><span class="line">&#123;</span><br><span class="line">    info = <span class="number">0</span>;</span><br><span class="line">    next = <span class="literal">nullptr</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt;</span></span><br><span class="line">SigleNode&lt;T&gt;::<span class="built_in">SigleNode</span>(T info, SigleNode* next)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">this</span>-&gt;info = info;</span><br><span class="line">    <span class="keyword">this</span>-&gt;next = next;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="链表头文件-sllisthpp"><a class="markdownIt-Anchor" href="#链表头文件-sllisthpp"></a> 链表头文件 <code>SLList.hpp</code></h3>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> once</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> _SIGLE_LINK_LIST_HPP_</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> _SIGLE_LINK_LIST_HPP_</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;SigleNode.hpp&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstddef&gt;</span>       <span class="comment">//提供 ptrdiff_t</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iterator&gt;</span>      <span class="comment">//提供 std::forward_iterator_tag</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt;</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SLList</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">//构造函数与析构函数</span></span><br><span class="line">    <span class="built_in">SLList</span>();</span><br><span class="line">    ~<span class="built_in">SLList</span>();</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//ADT 方法</span></span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">isEmpty</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">addToHead</span><span class="params">(<span class="keyword">const</span> T)</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">addToTail</span><span class="params">(<span class="keyword">const</span> T)</span></span>;</span><br><span class="line">    <span class="function">T <span class="title">deleteFromHead</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function">T <span class="title">deleteFromTail</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">deleteNode</span><span class="params">(<span class="keyword">const</span> T)</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">isInList</span><span class="params">(<span class="keyword">const</span> T)</span> <span class="keyword">const</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">theSize</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line">    </span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	SigleNode&lt;T&gt; *head, *tail;</span><br><span class="line">    <span class="keyword">int</span> size;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">//内嵌类 提供该容器的 迭代器</span></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">iterator</span></span></span><br><span class="line"><span class="class">    &#123;</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        <span class="comment">//向前迭代器 typdef 声明</span></span><br><span class="line">        <span class="keyword">typedef</span> std::forward_iterator_tag   iterator_category;</span><br><span class="line">        <span class="keyword">typedef</span> T                           value_type;</span><br><span class="line">        <span class="keyword">typedef</span> <span class="keyword">ptrdiff_t</span>                   difference_type;</span><br><span class="line">        <span class="keyword">typedef</span> T*                          pointer;</span><br><span class="line">        <span class="keyword">typedef</span> T&amp;                          reference;</span><br><span class="line">		</span><br><span class="line">        <span class="comment">//构造函数</span></span><br><span class="line">        <span class="built_in">iterator</span>(SigleNode&lt;T&gt;* theNode = <span class="literal">nullptr</span>);</span><br><span class="line">		</span><br><span class="line">        <span class="comment">//重载运算符，用于 iterator 的操作</span></span><br><span class="line">        T&amp; <span class="keyword">operator</span>*() <span class="keyword">const</span>;</span><br><span class="line">        T* <span class="keyword">operator</span>-&gt;() <span class="keyword">const</span>;</span><br><span class="line">        iterator&amp; <span class="keyword">operator</span>++();</span><br><span class="line">        iterator <span class="keyword">operator</span>++(<span class="keyword">int</span>);</span><br><span class="line">        <span class="keyword">bool</span> <span class="keyword">operator</span>!=(<span class="keyword">const</span> iterator) <span class="keyword">const</span>;</span><br><span class="line">        <span class="keyword">bool</span> <span class="keyword">operator</span>==(<span class="keyword">const</span> iterator) <span class="keyword">const</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span>:</span><br><span class="line">        SigleNode&lt;T&gt;* node;</span><br><span class="line">    &#125;;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//提供 begin()和 end()</span></span><br><span class="line">    <span class="function">iterator <span class="title">begin</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line">    <span class="function">iterator <span class="title">end</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//各种方法的类外实现</span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt;</span></span><br><span class="line">SLList&lt;T&gt;::<span class="built_in">SLList</span>()</span><br><span class="line">&#123;</span><br><span class="line">    head = tail = <span class="literal">nullptr</span>;</span><br><span class="line">    size = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt;</span></span><br><span class="line">SLList&lt;T&gt;::~<span class="built_in">SLList</span>()</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">for</span>(SigleNode&lt;T&gt; *p; head != <span class="literal">nullptr</span>;)</span><br><span class="line">    &#123;</span><br><span class="line">        p = head-&gt;next;</span><br><span class="line">        <span class="keyword">delete</span> head;</span><br><span class="line">        size--;</span><br><span class="line">        head = p;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt;</span></span><br><span class="line"><span class="keyword">bool</span> SLList&lt;T&gt;::<span class="built_in">isEmpty</span>() <span class="keyword">const</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> head == <span class="literal">nullptr</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt;</span></span><br><span class="line"><span class="keyword">void</span> SLList&lt;T&gt;::<span class="built_in">addToHead</span>(T elem)</span><br><span class="line">&#123;</span><br><span class="line">    head = <span class="keyword">new</span> SigleNode&lt;T&gt;(elem, head);</span><br><span class="line">    <span class="keyword">if</span>(tail == <span class="literal">nullptr</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        tail = head;</span><br><span class="line">        tail-&gt;next = <span class="literal">nullptr</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    size++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt;</span></span><br><span class="line"><span class="keyword">void</span> SLList&lt;T&gt;::<span class="built_in">addToTail</span>(<span class="keyword">const</span> T elem)</span><br><span class="line">&#123;</span><br><span class="line">    tail-&gt;next = <span class="keyword">new</span> SigleNode&lt;T&gt;(elem, <span class="literal">nullptr</span>);</span><br><span class="line">    tail = tail-&gt;next;</span><br><span class="line">    <span class="keyword">if</span>(head == <span class="literal">nullptr</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        head = tail;</span><br><span class="line">        tail-&gt;next = <span class="literal">nullptr</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    size++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt;</span></span><br><span class="line">T SLList&lt;T&gt;::<span class="built_in">deleteFromHead</span>()</span><br><span class="line">&#123;</span><br><span class="line">    T elem = head-&gt;info;</span><br><span class="line">    SigleNode&lt;T&gt; *temp = head;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span>(head == tail)</span><br><span class="line">        head = tail = <span class="literal">nullptr</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        head = head-&gt;next;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">delete</span> temp;</span><br><span class="line">    size--;</span><br><span class="line">    <span class="keyword">return</span> elem;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt;</span></span><br><span class="line">T SLList&lt;T&gt;::<span class="built_in">deleteFromTail</span>()</span><br><span class="line">&#123;</span><br><span class="line">    T elem = tail-&gt;info;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span>(head == tail)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">delete</span> tail;</span><br><span class="line">        head = tail =<span class="literal">nullptr</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        SigleNode&lt;T&gt; *temp;</span><br><span class="line">        <span class="keyword">for</span>(temp = head; temp-&gt;next != tail; temp = temp-&gt;next);</span><br><span class="line">        <span class="keyword">delete</span> tail;</span><br><span class="line">        tail = temp;</span><br><span class="line">        tail-&gt;next = <span class="literal">nullptr</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    size--;</span><br><span class="line">    <span class="keyword">return</span> elem;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt;</span></span><br><span class="line"><span class="keyword">void</span> SLList&lt;T&gt;::<span class="built_in">deleteNode</span>(<span class="keyword">const</span> T elem)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(head != <span class="literal">nullptr</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">delete</span> head;</span><br><span class="line">        head = tail = <span class="literal">nullptr</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(elem == head-&gt;info)</span><br><span class="line">    &#123;</span><br><span class="line">        SigleNode&lt;T&gt; *temp = head;</span><br><span class="line">        head = head-&gt;next;</span><br><span class="line">        <span class="keyword">delete</span> temp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        SigleNode&lt;T&gt; *pred, *temp;</span><br><span class="line">        <span class="keyword">for</span>(pred = head, temp = head-&gt;next; (temp != <span class="literal">nullptr</span>) &amp;&amp; !(temp-&gt;info ==elem); pred = pred-&gt;next, temp = temp-&gt;next);</span><br><span class="line">        <span class="keyword">if</span>(temp != <span class="literal">nullptr</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            pred-&gt;next = temp-&gt;next;</span><br><span class="line">            <span class="keyword">if</span>(temp == tail)</span><br><span class="line">                tail = pred;</span><br><span class="line">            <span class="keyword">delete</span> temp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    size--;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt;</span></span><br><span class="line"><span class="keyword">bool</span> SLList&lt;T&gt;::<span class="built_in">isInList</span>(<span class="keyword">const</span> T elem) <span class="keyword">const</span></span><br><span class="line">&#123;</span><br><span class="line">    SLList&lt;T&gt; *temp;</span><br><span class="line">    <span class="keyword">for</span>(temp = head; (temp != <span class="literal">nullptr</span>) &amp;&amp; !(temp-&gt;info == elem); temp = temp-&gt;next);</span><br><span class="line">    <span class="keyword">return</span> temp != <span class="literal">nullptr</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt;</span></span><br><span class="line"><span class="keyword">int</span> SLList&lt;T&gt;::<span class="built_in">theSize</span>() <span class="keyword">const</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> size;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt;</span></span><br><span class="line">SLList&lt;T&gt;::iterator::<span class="built_in">iterator</span>(SigleNode&lt;T&gt;* theNode)</span><br><span class="line">&#123;</span><br><span class="line">    node = theNode;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt;</span></span><br><span class="line">T&amp; SLList&lt;T&gt;::iterator::<span class="keyword">operator</span>*() <span class="keyword">const</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> node-&gt;info;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt;</span></span><br><span class="line">T* SLList&lt;T&gt;::iterator::<span class="keyword">operator</span>-&gt;() <span class="keyword">const</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> &amp;node-&gt;info;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//typename 用于区分 模板类型 与 实例化类型</span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt;</span></span><br><span class="line"><span class="keyword">typename</span> SLList&lt;T&gt;::iterator&amp; SLList&lt;T&gt;::iterator::<span class="keyword">operator</span>++()</span><br><span class="line">&#123;</span><br><span class="line">    node = node-&gt;next;</span><br><span class="line">    <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt;</span></span><br><span class="line"><span class="keyword">typename</span> SLList&lt;T&gt;::iterator SLList&lt;T&gt;::iterator::<span class="keyword">operator</span>++(<span class="keyword">int</span>)</span><br><span class="line">&#123;</span><br><span class="line">    iterator old = *<span class="keyword">this</span>;</span><br><span class="line">    node = node-&gt;next;</span><br><span class="line">    <span class="keyword">return</span> old;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt;</span></span><br><span class="line"><span class="keyword">bool</span> SLList&lt;T&gt;::iterator::<span class="keyword">operator</span>!=(<span class="keyword">const</span> iterator right) <span class="keyword">const</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> node != right.node;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt;</span></span><br><span class="line"><span class="keyword">bool</span> SLList&lt;T&gt;::iterator::<span class="keyword">operator</span>==(<span class="keyword">const</span> iterator right) <span class="keyword">const</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> node == right.node;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt;</span></span><br><span class="line"><span class="keyword">typename</span> SLList&lt;T&gt;::iterator SLList&lt;T&gt;::<span class="built_in">begin</span>() <span class="keyword">const</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">iterator</span>(head);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt;</span></span><br><span class="line"><span class="keyword">typename</span> SLList&lt;T&gt;::iterator SLList&lt;T&gt;::<span class="built_in">end</span>() <span class="keyword">const</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">iterator</span>(tail-&gt;next);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="测试源文件"><a class="markdownIt-Anchor" href="#测试源文件"></a> 测试源文件</h3>
+<p>待续。。。</p>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2021年03月28日 13:27</p>
+        <p>原始链接： <a class="post-url" href="/2021/03/28/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%93%BE%E8%A1%A8/" title="高数积分">http://example.com/2021/03/28/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%93%BE%E8%A1%A8/</a></p>
+        <footer>
+            <a href="http://example.com">
+                <img src="/images/QQ%E5%9B%BE%E7%89%8720201206224159.jpg" alt="Crushed">
+                Crushed
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2021/03/28/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%93%BE%E8%A1%A8/&title=《高数积分》 — Crushed&pic=images/2.jpg" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2021/03/28/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%93%BE%E8%A1%A8/&title=《高数积分》 — Crushed&source=Crushed's Blog" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://example.com/2021/03/28/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%93%BE%E8%A1%A8/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《高数积分》 — Crushed&url=http://example.com/2021/03/28/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%93%BE%E8%A1%A8/&via=http://example.com" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://example.com/2021/03/28/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%93%BE%E8%A1%A8/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://example.com/2021/03/28/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%93%BE%E8%A1%A8/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/数据结构/" class="color5">数据结构</a>
+      
+    <a href="/tags/链表/" class="color3">链表</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%93%BE%E8%A1%A8"><span class="post-toc-text"> 数据结构——链表</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%8D%95%E5%90%91%E9%93%BE%E8%A1%A8"><span class="post-toc-text"> 单向链表</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%8A%82%E7%82%B9%E5%A4%B4%E6%96%87%E4%BB%B6-siglenodehpp"><span class="post-toc-text"> 节点头文件 SigleNode.hpp</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E9%93%BE%E8%A1%A8%E5%A4%B4%E6%96%87%E4%BB%B6-sllisthpp"><span class="post-toc-text"> 链表头文件 SLList.hpp</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%B5%8B%E8%AF%95%E6%BA%90%E6%96%87%E4%BB%B6"><span class="post-toc-text"> 测试源文件</span></a></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+  
+    <a href="/2021/03/27/%E9%AB%98%E6%95%B0%E7%A7%AF%E5%88%86/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">高数积分</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+        <div id="SOHUCS" sid="数据结构-链表" ></div>
+<script type="text/javascript">
+    (function(){
+        var appid = 'cyvnl2un8';
+        var conf = 'fab920dea188ee2448085730d3c3f4f2';
+        var width = window.innerWidth || document.documentElement.clientWidth;
+        if (width < 960) {
+            window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2021 Crushed<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://example.com",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 2
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/C/">C++</a><a class="category-link" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 10px;">数据结构</a> <a href="/tags/%E7%A7%AF%E5%88%86/" style="font-size: 10px;">积分</a> <a href="/tags/%E9%93%BE%E8%A1%A8/" style="font-size: 10px;">链表</a> <a href="/tags/%E9%AB%98%E6%95%B0/" style="font-size: 10px;">高数</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  target="_blank" rel="noopener" href="https://crushed.vip/">
+                    <i class="fa fa-home"></i><span>Home</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>Archives</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/about">
+                    <i class="fa fa-user"></i><span>About</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 10px;">数据结构</a> <a href="/tags/%E7%A7%AF%E5%88%86/" style="font-size: 10px;">积分</a> <a href="/tags/%E9%93%BE%E8%A1%A8/" style="font-size: 10px;">链表</a> <a href="/tags/%E9%AB%98%E6%95%B0/" style="font-size: 10px;">高数</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+
+<script src="/js/search.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  
+<script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+
+  
+<link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  
+<script src="/js/animate.js"></script>
+
+
+
+  
+<script src="/js/pop-img.js"></script>
+
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>
