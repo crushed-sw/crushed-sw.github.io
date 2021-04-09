@@ -6,7 +6,8 @@
     <content><![CDATA[<h1 id="stlvector"><a class="markdownIt-Anchor" href="#stlvector"></a> STL–vector</h1>
 <div class="note warning modern"><p>特此声明：本博客中数据结构调用方法均与<code>STL</code>相同。（类<code>STL</code>实现，具有容器，迭代器，但未实现空间配置器，也不会有内存管理，只关注容器与算法。</p>
 </div>
-<p>本文的容器内算法实现会用到<code>iterator</code>，如果没有了解的朋友可以看我的另一篇博客：<a class="btn-beautify button--animated " href="https://crushed.vip/2021/03/26/STL-%E8%BF%AD%E4%BB%A3%E5%99%A8/" 
+<p>待更新。。。。。。。。。。。</p>
+<p>本文的容器内算法实现会用到<code>iterator</code>，如果没有了解的朋友可以看我的另一篇博客：<a class="btn-beautify button--animated " href="https://crushed.vip/2021/03/29/STL-%E8%BF%AD%E4%BB%A3%E5%99%A8/" 
   title="iterator"><span>iterator</span></a></p>
 ]]></content>
       <categories>
@@ -269,6 +270,8 @@
 <figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">(T const &amp;x): char[<span class="number">5</span>]</span><br><span class="line">(T x): const char *</span><br></pre></td></tr></table></figure>
 <p>究其根本就是因为引用参数类型和非引用参数类型不同。</p>
 <p>但相对应的对于这个问题，还没有通用的解决方法，只能靠以上方法或重载相应的类型函数来解决。</p>
+<p>如有错误请在评论区点出，作者将会及时修改，如果对这个文章感兴趣大家可以收藏该网址，并评论灌水。</p>
+<p>转载请标明出处。</p>
 ]]></content>
       <categories>
         <category>C++</category>
