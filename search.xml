@@ -1,14 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>不等式</title>
+    <url>/2021/05/08/%E4%B8%8D%E7%AD%89%E5%BC%8F/</url>
+    <content><![CDATA[<h1 id="不等式"><a class="markdownIt-Anchor" href="#不等式"></a> 不等式</h1>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\frac{1}{2}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.00744em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+      <tags>
+        <tag>不等式</tag>
+        <tag>高数</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>STL-vector</title>
     <url>/2021/04/05/STL-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-vector/</url>
     <content><![CDATA[<h1 id="stlvector"><a class="markdownIt-Anchor" href="#stlvector"></a> STL–vector</h1>
 <div class="note warning modern"><p>特此声明：本博客中数据结构调用方法均与<code>STL</code>相同。（类<code>STL</code>实现，具有容器，迭代器，但未实现空间配置器，也不会有内存管理，只关注容器与算法。</p>
 </div>
-<p>待更新。。。。。。。。。。。</p>
-<p>本文的容器内算法实现会用到<code>iterator</code>，如果没有了解的朋友可以看我的另一篇博客：<a class="btn-beautify button--animated " href="https://crushed.vip/2021/03/29/STL-%E8%BF%AD%E4%BB%A3%E5%99%A8/" 
-  title="iterator"><span>iterator</span></a></p>
+<p>本文的容器内算法实现会用到模板的使用<code>iterator</code>，如果没有了解的朋友可以看我的其他博客：<a class="btn-beautify button--animated " href="https://crushed.vip/2021/03/29/STL-%E8%BF%AD%E4%BB%A3%E5%99%A8/" 
+  title="iterator"><span>iterator</span></a> <a class="btn-beautify button--animated " href="https://crushed.vip/2021/04/07/%E6%A8%A1%E6%9D%BF/" 
+  title="模板基础"><span>模板基础</span></a></p>
 ]]></content>
       <categories>
         <category>C++</category>

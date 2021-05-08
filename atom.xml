@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-04-09T14:19:52.443Z</updated>
+  <updated>2021-05-08T11:54:54.274Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,13 +17,40 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>不等式</title>
+    <link href="http://example.com/2021/05/08/%E4%B8%8D%E7%AD%89%E5%BC%8F/"/>
+    <id>http://example.com/2021/05/08/%E4%B8%8D%E7%AD%89%E5%BC%8F/</id>
+    <published>2021-05-07T16:00:00.000Z</published>
+    <updated>2021-05-08T11:54:54.274Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="不等式"><a class="markdownIt-Anchor" href="#不等式"></a> 不等式</h1><p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\frac{1}{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.00744em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;不等式&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#不等式&quot;&gt;&lt;/a&gt; 不等式&lt;/h1&gt;
+&lt;p class=&#39;katex-block&#39;&gt;&lt;span class=&quot;katex-display&quot;&gt;&lt;span class=&quot;katex&quot;&gt;&lt;</summary>
+      
+    
+    
+    
+    <category term="数学" scheme="http://example.com/categories/%E6%95%B0%E5%AD%A6/"/>
+    
+    
+    <category term="不等式" scheme="http://example.com/tags/%E4%B8%8D%E7%AD%89%E5%BC%8F/"/>
+    
+    <category term="高数" scheme="http://example.com/tags/%E9%AB%98%E6%95%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>STL-vector</title>
     <link href="http://example.com/2021/04/05/STL-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-vector/"/>
     <id>http://example.com/2021/04/05/STL-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-vector/</id>
     <published>2021-04-04T16:00:00.000Z</published>
-    <updated>2021-04-09T14:19:52.443Z</updated>
+    <updated>2021-04-10T00:36:20.620Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="stlvector"><a class="markdownIt-Anchor" href="#stlvector"></a> STL–vector</h1><div class="note warning modern"><p>特此声明：本博客中数据结构调用方法均与<code>STL</code>相同。（类<code>STL</code>实现，具有容器，迭代器，但未实现空间配置器，也不会有内存管理，只关注容器与算法。</p></div><p>待更新。。。。。。。。。。。</p><p>本文的容器内算法实现会用到<code>iterator</code>，如果没有了解的朋友可以看我的另一篇博客：<a class="btn-beautify button--animated " href="https://crushed.vip/2021/03/29/STL-%E8%BF%AD%E4%BB%A3%E5%99%A8/"   title="iterator"><span>iterator</span></a></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="stlvector"><a class="markdownIt-Anchor" href="#stlvector"></a> STL–vector</h1><div class="note warning modern"><p>特此声明：本博客中数据结构调用方法均与<code>STL</code>相同。（类<code>STL</code>实现，具有容器，迭代器，但未实现空间配置器，也不会有内存管理，只关注容器与算法。</p></div><p>本文的容器内算法实现会用到模板的使用<code>iterator</code>，如果没有了解的朋友可以看我的其他博客：<a class="btn-beautify button--animated " href="https://crushed.vip/2021/03/29/STL-%E8%BF%AD%E4%BB%A3%E5%99%A8/"   title="iterator"><span>iterator</span></a> <a class="btn-beautify button--animated " href="https://crushed.vip/2021/04/07/%E6%A8%A1%E6%9D%BF/"   title="模板基础"><span>模板基础</span></a></p>]]></content>
     
     
       
